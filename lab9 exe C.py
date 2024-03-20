@@ -27,6 +27,7 @@ def fetch_product_data(url):
 def list_all_products(products):
     for product in products:
         print(product['title'])                         #iterate through products to get all of them
+        print('\n')
 
 def search_product(products, name):
     found = False
