@@ -26,12 +26,12 @@ def fetch_product_data(url):
 
 def list_all_products(products):
     for product in products:
-        print(product['name'])
+        print(product['title'])
 
 def search_product(products, name):
     found = False
     for product in products:
-        if product['name'] == name:
+        if product['title'] == name:
             found = True
             print(f"Product Details for '{name}':")
             print(json.dumps(product, indent=4))
@@ -59,5 +59,6 @@ def main():
     else:
         print("Failed to fetch product data.")
 
-if __name__ == " __main__ ":
-    main ()
+
+if __name__ == "__main__":
+    main()
