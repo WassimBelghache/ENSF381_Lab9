@@ -26,17 +26,17 @@ def fetch_product_data(url):
 
 def list_all_products(products):
     for product in products:
-        print(product['title'])
+        print(product['title'])                         #iterate through products to get all of them
 
 def search_product(products, name):
     found = False
     for product in products:
-        if product['title'] == name:
-            found = True
+        if product['title'].lower() == name.lower():   #Capitalization does not affect search
+            found = True 
             print(f"Product Details for '{name}':")
             print(json.dumps(product, indent=4))
     if not found:
-        print("Product not found.")
+        print("Product not found.")                     #if name of products is not found print message
 
 
 def main():
