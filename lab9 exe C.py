@@ -35,6 +35,7 @@ def search_product(products, name):
             found = True 
             print(f"Product Details for '{name}':")
             print(json.dumps(product, indent=4))
+            print('\n')
     if not found:
         print("Product not found.")                     #if name of products is not found print message
 
